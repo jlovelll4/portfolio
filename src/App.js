@@ -22,19 +22,17 @@ class App extends Component {
 
     render(){
         return (
-            <section>
             <div className="app-container">
                 <div
                 onClick={this.navToggler}
                 className={`overlay overlay-${this.state.navToggle ? "open" : "closed"}`}/>
-                <button onClick={this.navToggler}>|||</button>
+                <button className="icon" onClick={this.navToggler}>|||</button>
                 <Navbar navToggler={this.navToggler} navToggle={this.state.navToggle}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
                 <Route path="/projects" component={Projects}/>
             </div>
-            </section>
         )
     }
 }

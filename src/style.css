@@ -11,7 +11,7 @@
         top: 16px;
     }
 }
-.button{
+.page-link{
     padding: 10px 20px;
     border: 2px solid rgba(0,0,0,0.6);
     background-color: rgba(0,0,0,.1);
@@ -21,9 +21,37 @@
     transition: all .5s;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
 }
-.button:hover{
+.page-link:link{
+    color: wheat;
+}
+.page-link:active{
+    color: ghostwhite;
+}
+.page-link:visited{
+    color: black;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 15pt;
+
+}
+.nav-link:link{
+    color: wheat;
+}
+.nav-link:active{
+    color: ghostwhite;
+}
+.nav-link:visited{
+    color:olive;
+}
+a:hover{
     background-color: rgba(0,0,0,0.6);
+}
+.icon{
+    position: relative;
+    left: 200px;
 }
 .app-container {
     height: 100vh;
@@ -43,10 +71,30 @@
 }
 .header{
     position: absolute;
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     left: 200px;
     top: 200px;
+}
+.header > h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    color: olive;
+}
+.header > h4 {
+    font-family: Roboto sans-serif;
+    font-size: 40px;
+}
+.header > p {
+    font-family: Roboto sans-serif;
+    font-size: 20px;
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
 }
 .nav {
     height: 100vh;
@@ -57,7 +105,6 @@
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    transition: left 600ms cubic-bezier(0, 1.57, 0.6,-1.2);
 }
 
 .nav > Link {
@@ -71,24 +118,30 @@
 
 .nav-closed {
     left: -200px;
+    transition: left 1000ms
 }
 
 .nav-open {
-    left: 0px;
+    left: 0;
+    transition: left 300ms cubic-bezier(0, 1.57, 0.6,-1.2);
+
 }
 
-.overlay {
+.overlay{
     width: 100vw;
     height: 100vh;
     background-color: #1119;
     position: absolute;
-    transition: right 600ms cubic-bezier(0, 1.57, 0.6,-1.2);
+    overflow-x: hidden;
 }
-
 .overlay-open {
-    right: 0px;
+    right: 0;
+    transition: right 300ms cubic-bezier(0, 1.57, 0.6,-1.2);
+    overflow-x: hidden;
 }
 
 .overlay-closed {
     right: -100vw;
+    overflow-x: hidden;
+    transition: right 1000ms;
 }
